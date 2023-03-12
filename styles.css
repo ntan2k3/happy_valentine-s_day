@@ -7,7 +7,7 @@
 
 body {
     position: relative;
-    background-color: #ffffff;
+    background-color: rgb(233, 105, 105);
 }
 
 .main {
@@ -28,12 +28,12 @@ body {
     border: none;
     outline: none;
     border-radius: 12px;
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(255, 255, 255);
     color: rgb(233, 105, 105);
     font-size: 20px;
     cursor: pointer;
     transition: all 0.3s linear;
-    box-shadow: 0 0 4px 4px rgba(171, 171, 171, 0.601);
+    box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.601);
 }
 
 #btn:hover {
@@ -53,13 +53,26 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    color: rgb(0, 0, 0);
-    background-color: rgba(242, 118, 118, 0.792);
+    color: rgb(255, 255, 255);
+    background-color: rgba(227, 75, 75, 0.738);
     height: 500px;
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 40px;
     visibility: hidden;
-    transition: all 0.5s linear;
+    transform-origin: left center;
+    animation: appear 6s linear;
+}
+
+@keyframes appear {
+    0% {
+        transform: scale(0) translateX(-50%);
+    }
+    50% {
+        transform: scale(0.5) translateX(-50%);
+    }
+    100% {
+        transform: scale(1) translateX(-50%);
+    }
 }
 
 h1 {
@@ -73,18 +86,19 @@ h1 {
     line-height: 1.5;
     font-weight: 700;
     overflow: hidden;
-    animation: animation 5s linear;
 }
 
-@keyframes animation {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
+.heart {
+    position: fixed;
+    top: -1vh;
+    transform: translateY(0);
+    animation: rain 3s linear forwards;
+    font-size: 2rem;
+}
+
+@keyframes rain {
+    to {
+        transform: translateY(105vh);
     }
 }
 
@@ -93,6 +107,7 @@ h1 {
         width: 100%;
         top: -70px;
         height: 550px;
+        padding: 20px;
     }
     img {
         width: 280px;
