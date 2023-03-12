@@ -53,8 +53,8 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    color: rgb(255, 255, 255);
-    background-color: rgba(227, 75, 75, 0.738);
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.678);
     height: 500px;
     border-radius: 20px;
     padding: 20px 40px;
@@ -116,6 +116,6 @@ h1 {
     #btn {
         margin: 20px;
         padding: 8px 15px;
-        font-size: 15.6px;
+        font-size: 16px;
     }
 }
